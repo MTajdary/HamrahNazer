@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>همراه ناظر (نسخه نهایی)</title>
+    <title>همراه ناظر </title>
     
     <!-- PWA Manifest and Theme Color -->
     <meta name="theme-color" content="#FFD700">
@@ -52,25 +52,9 @@
 
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #e5e7eb; /* A neutral background for the page */
-            color: var(--foreground);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        #app-container {
-            width: 100%;
-            max-width: 420px; /* Simulates a mobile screen width */
-            height: 100vh; /* Full viewport height */
-            max-height: 900px; /* Max height for larger screens */
             background-color: var(--background);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-radius: 20px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            color: var(--foreground);
+            transition: background-color 0.3s, color 0.3s;
         }
         .themed-card { background-color: var(--card-background); color: var(--card-foreground); border-color: var(--border-color); }
         .themed-header { background-color: var(--card-background); border-color: var(--border-color); }
@@ -112,9 +96,7 @@
     </style>
 </head>
 <body>
-    <div id="app-container">
-        <div id="root" class="h-full"></div>
-    </div>
+    <div id="root"></div>
     <div id="pdf-render-area"></div>
 
     <script type="text/babel">
