@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hamrah-nazer-cache-v6'; // نسخه کش برای به‌روزرسانی اجباری افزایش یافت
+const CACHE_NAME = 'hamrah-nazer-cache-v7'; // نسخه کش برای به‌روزرسانی اجباری افزایش یافت
 const urlsToCache = [
     './', // Cache the root
     './index.html', // Or the correct name of your main html file

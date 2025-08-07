@@ -50,6 +50,13 @@
             --border-color: #b0c4de;
         }
 
+        html, body, #root {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
         body {
             font-family: 'Vazirmatn', sans-serif;
             background-color: var(--background);
@@ -96,7 +103,7 @@
     </style>
 </head>
 <body>
-    <div id="root" class="h-screen w-screen"></div>
+    <div id="root"></div>
     <div id="pdf-render-area"></div>
 
     <script type="text/babel">
