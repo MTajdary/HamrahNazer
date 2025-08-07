@@ -52,9 +52,25 @@
 
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: var(--background);
+            background-color: #e5e7eb; /* A neutral background for the page */
             color: var(--foreground);
-            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #app-container {
+            width: 100%;
+            max-width: 420px; /* Simulates a mobile screen width */
+            height: 100vh; /* Full viewport height */
+            max-height: 900px; /* Max height for larger screens */
+            background-color: var(--background);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .themed-card { background-color: var(--card-background); color: var(--card-foreground); border-color: var(--border-color); }
         .themed-header { background-color: var(--card-background); border-color: var(--border-color); }
@@ -96,7 +112,9 @@
     </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="app-container">
+        <div id="root" class="h-full"></div>
+    </div>
     <div id="pdf-render-area"></div>
 
     <script type="text/babel">
@@ -915,7 +933,7 @@
                     case 'projectDetail': return <ProjectDetailScreen project={selectedProject} onBack={() => setCurrentScreen('projectList')} userProfile={profile} allReports={allReports} setAllReports={setAllReports} />;
                     case 'profile': return <ProfileScreen profile={profile} setProfile={setProfile} onBack={() => setCurrentScreen('projectList')} theme={theme} setTheme={setTheme} />;
                     default: return (
-                         <div className={`flex flex-col h-screen ${layoutClass}`}>
+                         <div className={`flex flex-col h-full ${layoutClass}`}>
                             <header className="themed-header flex justify-between items-center p-4 border-b">
                                 <button onClick={() => setCurrentScreen('profile')} className="p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
                                 <button onClick={() => setShowTools(true)} className="p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M8 21v-9M12 21v-9M16 21v-9M2 10l10-7 10 7"/></svg></button>
@@ -945,7 +963,7 @@
                     );
                 }
             };
-            return (<div className="h-screen w-full">{renderScreen()}</div>);
+            return (<div className="h-full w-full">{renderScreen()}</div>);
         }
 
         const container = document.getElementById('root');
