@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hamrah-nazer-cache-v4'; // Incremented cache version
+const CACHE_NAME = 'hamrah-nazer-cache-v5'; // نسخه کش برای به‌روزرسانی اجباری افزایش یافت
 const urlsToCache = [
     './', // Cache the root
     './index.html', // Or the correct name of your main html file
