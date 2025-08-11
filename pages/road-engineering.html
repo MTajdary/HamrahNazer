@@ -1,1 +1,33 @@
-<!DOCTYPE html><html lang='fa'><head><meta charset='UTF-8'><title>road-engineering.html</title></head><body><h2>ابزارهای مهندس راه</h2></body></html>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ابزارهای مهندس راه</title>
+<link rel="stylesheet" href="../style.css" />
+<script src="../road-engineering.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>همراه ناظر</h1>
+</header>
+<main>
+  <h2>ابزارهای مهندس راه</h2>
+  <section>
+    <label for="slope">شیب طولی (%):</label>
+    <input id="slope" type="number" step="0.01" min="0" />
+  </section>
+  <section>
+    <label for="length">طول ترانشه (متر):</label>
+    <input id="length" type="number" step="0.01" min="0" />
+  </section>
+  <section>
+    <label for="cut-fill">حجم خاک‌برداری (مترمکعب):</label>
+    <input id="cut-fill" type="number" step="0.01" min="0" />
+  </section>
+  <button id="calc-road">محاسبه</button>
+  <p id="road-result"></p>
+</main>
+<footer>© محمد تاجداری</footer>
+</body>
+</html>
