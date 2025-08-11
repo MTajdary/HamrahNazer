@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>محاسبات پیشرفته مهندسی</title>
 <link rel="stylesheet" href="../style.css" />
+<script src="../calculations.js" defer></script>
 </head>
 <body>
 <header>
@@ -12,7 +13,20 @@
 </header>
 <main>
   <h2>محاسبات پیشرفته مهندسی</h2>
-  <p>در حال توسعه...</p>
+  <section>
+    <label for="length">طول (متر):</label>
+    <input id="length" type="number" step="0.01" min="0" />
+  </section>
+  <section>
+    <label for="width">عرض (متر):</label>
+    <input id="width" type="number" step="0.01" min="0" />
+  </section>
+  <section>
+    <label for="depth">عمق (متر):</label>
+    <input id="depth" type="number" step="0.01" min="0" />
+  </section>
+  <button id="calc-volume">محاسبه حجم خاک</button>
+  <p id="volume-result"></p>
 </main>
 <footer>© محمد تاجداری</footer>
 </body>
