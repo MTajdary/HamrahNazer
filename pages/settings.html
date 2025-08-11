@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تنظیمات</title>
+<link rel="stylesheet" href="../style.css" />
+<script src="../settings.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>همراه ناظر</h1>
+</header>
+<main>
+  <h2>تنظیمات</h2>
+  <form id="settings-form">
+    <label>
+      نمایش اعداد انگلیسی:
+      <input type="checkbox" id="toggle-english-numbers" />
+    </label>
+    <br/><br/>
+    <label>
+      واحد اندازه‌گیری:
+      <select id="unit-select">
+        <option value="metric">متریک</option>
+        <option value="imperial">امپریال</option>
+      </select>
+    </label>
+    <br/><br/>
+    <label>
+      نمایش تگ پایان گزارش (کپی‌رایت):
+      <input type="checkbox" id="toggle-report-tag" checked />
+    </label>
+    <br/><br/>
+    <button type="submit">ذخیره تنظیمات</button>
+  </form>
+  <p id="settings-msg"></p>
+</main>
+<footer>© محمد تاجداری</footer>
+</body>
+</html>
