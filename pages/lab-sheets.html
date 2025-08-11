@@ -1,1 +1,33 @@
-<!DOCTYPE html><html lang='fa'><head><meta charset='UTF-8'><title>lab-sheets.html</title></head><body><h2>بررسی شیت‌های آزمایشگاهی</h2></body></html>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>بررسی شیت‌های آزمایشگاهی</title>
+<link rel="stylesheet" href="../style.css" />
+<script src="../lab-sheets.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>همراه ناظر</h1>
+</header>
+<main>
+  <h2>بررسی شیت‌های آزمایشگاهی</h2>
+  <form id="lab-form">
+    <label for="test-type">نوع آزمایش:</label>
+    <select id="test-type" required>
+      <option value="">انتخاب کنید</option>
+      <option value="soil">خاک</option>
+      <option value="concrete">بتن</option>
+      <option value="asphalt">آسفالت</option>
+      <option value="steel">فولاد</option>
+    </select>
+    <label for="value">مقدار (مثلاً مقاومت فشاری):</label>
+    <input id="value" type="number" step="0.01" required />
+    <button type="submit">بررسی</button>
+  </form>
+  <p id="lab-result"></p>
+</main>
+<footer>© محمد تاجداری</footer>
+</body>
+</html>
